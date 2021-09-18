@@ -85,7 +85,7 @@ const Navbar = () => {
           </IconButton>
         </toolbar>
       </AppBar>
-      <Drawer anchor="top" open={open} onClose={() => setOpen(false)}>
+      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <IconButton
           className={classes.menubottoncancel}
           onClick={() => setOpen(false)}
@@ -179,7 +179,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "60vw",
     },
-
     "& h4": {
       margin: theme.spacing(3),
       fontSize: "1.8rem",
@@ -189,7 +188,6 @@ const useStyles = makeStyles((theme) => ({
     "& h4:hover": {
       color: "red",
     },
-    "& a": {},
   },
 }));
 

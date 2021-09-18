@@ -1,12 +1,16 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import Technologies from "./Technologies";
 
 const Skills = ({ title, id }) => {
   const classes = useStyles();
   return (
     <div className={classes.section}>
       <div className={classes.sectionskills} id={id}>
-        <Typography variant="h3">{title}</Typography>
+        <Typography variant="h3" className={classes.h3}>
+          {title}
+        </Typography>
+        <Technologies />
       </div>
     </div>
   );
@@ -16,14 +20,15 @@ const Skills = ({ title, id }) => {
 const useStyles = makeStyles((theme) => ({
   section: {
     textAlign: "center",
-    minHeight: "1000vh",
-    background: "#fff",
-    color: "#333",
+    minHeight: "100vh",
   },
   sectionskills: {
     maxWidth: "800vw",
     margin: "o auto",
-    textDecoration: "underline",
+  },
+  h3: {
+    textAlign: "center",
+    padding: "30px",
   },
 }));
 
