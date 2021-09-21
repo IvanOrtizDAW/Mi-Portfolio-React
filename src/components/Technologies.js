@@ -153,10 +153,7 @@ const useStyles = makeStyles((theme) => ({
     height: "50px",
   },
   paper: {
-    maxWidth: "35%",
-    [theme.breakpoints.down("sm")]: {
-      maxWidth: "100%",
-    },
+    maxWidth: "200px",
   },
 }));
 

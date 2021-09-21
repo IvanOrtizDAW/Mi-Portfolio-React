@@ -20,6 +20,7 @@ import { red } from "@material-ui/core/colors";
 import { yellow } from "@material-ui/core/colors";
 import { green } from "@material-ui/core/colors";
 import { blue } from "@material-ui/core/colors";
+import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 
 const links = [
   {
@@ -60,11 +61,19 @@ const links = [
 const Navbar = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const scrollToTop = () => {
+    Scroll.scrollToTop();
+  };
   return (
     <>
       <AppBar className={classes.barra}>
         <toolbar className={classes.toolbar}>
-          <img src={logo} className={classes.logo} alt="hola" />
+          <img
+            src={logo}
+            className={classes.logo}
+            alt="hola"
+            onClick={scrollToTop}
+          />
           <List className={classes.lista}>
             {links.map(({ id, text }, index) => (
               <Link

@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionskills: {
     maxWidth: "800vw",
-    margin: "o auto",
+    margin: "0 auto",
   },
   h3: {
     textAlign: "center",
